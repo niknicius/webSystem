@@ -5,9 +5,10 @@ import {buildSchemaSync} from 'type-graphql';
 import { sequelize } from "./sequelize";
 
 import { BookResolver } from "./resolvers/book.resolver";
+import { AuthorResolver } from "./resolvers/author.resolver";
 
 const schema = buildSchemaSync({
-    resolvers: [BookResolver],
+    resolvers: [BookResolver, AuthorResolver],
     emitSchemaFile: false,
     validate: false,
 });
